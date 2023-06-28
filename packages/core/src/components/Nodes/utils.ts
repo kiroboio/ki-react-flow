@@ -29,6 +29,8 @@ export const getHandleBounds = (
 
     return {
       id: handle.getAttribute('data-handleid'),
+      rendererId: handle.getAttribute('data-rendererid'),
+      nodeId: handle.getAttribute('data-nodeid'),
       position: handle.getAttribute('data-handlepos') as unknown as Position,
       x: (handleBounds.left - nodeBounds.left - nodeOffset.x) / zoom,
       y: (handleBounds.top - nodeBounds.top - nodeOffset.y) / zoom,

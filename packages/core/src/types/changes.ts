@@ -3,6 +3,7 @@
 import type { XYPosition, Dimensions } from './utils';
 import type { Node } from './nodes';
 import type { Edge } from './edges';
+import { ReactFlowState } from './general';
 
 export type NodeDimensionChange = {
   id: string;
@@ -10,6 +11,7 @@ export type NodeDimensionChange = {
   dimensions?: Dimensions;
   updateStyle?: boolean;
   resizing?: boolean;
+  handleRenderers?: ReactFlowState['handleRenderers'];
 };
 
 export type NodePositionChange = {

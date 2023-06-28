@@ -42,13 +42,16 @@ const ConnectionLine = ({
 }: ConnectionLineProps) => {
   const { fromNode, handleId, toX, toY, connectionMode } = useStore(
     useCallback(
-      (s: ReactFlowStore) => ({
-        fromNode: s.nodeInternals.get(nodeId),
-        handleId: s.connectionHandleId,
-        toX: (s.connectionPosition.x - s.transform[0]) / s.transform[2],
-        toY: (s.connectionPosition.y - s.transform[1]) / s.transform[2],
-        connectionMode: s.connectionMode,
-      }),
+      (s: ReactFlowStore) => {
+        const rendererId = s.handleRenderers[`${nodeId}-${s.connectionHandleId}`];
+        return {
+          fromNode: s.nodeInternals.get(rendererId || nodeId),
+          handleId: s.connectionHandleId,
+          toX: (s.connectionPosition.x - s.transform[0]) / s.transform[2],
+          toY: (s.connectionPosition.y - s.transform[1]) / s.transform[2],
+          connectionMode: s.connectionMode,
+        };
+      },
       [nodeId]
     ),
     shallow

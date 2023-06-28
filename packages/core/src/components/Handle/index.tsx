@@ -53,6 +53,7 @@ const Handle = forwardRef<HTMLDivElement, HandleComponentProps>(
       className,
       onMouseDown,
       onTouchStart,
+      nodeId: _nodeId,
       ...rest
     },
     ref
@@ -60,7 +61,8 @@ const Handle = forwardRef<HTMLDivElement, HandleComponentProps>(
     const handleId = id || null;
     const isTarget = type === 'target';
     const store = useStoreApi();
-    const nodeId = useNodeId();
+    const rendererId = useNodeId();
+    const nodeId = _nodeId || useNodeId();
     const { connectOnClick, noPanClassName } = useStore(selector, shallow);
     const { connecting, clickConnecting } = useStore(connectingSelector(nodeId, handleId, type), shallow);
 
@@ -159,6 +161,7 @@ const Handle = forwardRef<HTMLDivElement, HandleComponentProps>(
     return (
       <div
         data-handleid={handleId}
+        data-rendererid={rendererId}
         data-nodeid={nodeId}
         data-handlepos={position}
         data-id={`${nodeId}-${handleId}-${type}`}

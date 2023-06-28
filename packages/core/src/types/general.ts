@@ -145,6 +145,7 @@ export type ReactFlowStore = {
   height: number;
   transform: Transform;
   nodeInternals: NodeInternals;
+  handleRenderers: Record<string, string>;
   edges: Edge[];
   onNodesChange: OnNodesChange | null;
   onEdgesChange: OnEdgesChange | null;

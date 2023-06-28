@@ -78,22 +78,32 @@ const createRFStore = () =>
           );
 
           if (doUpdate) {
+            const source = getHandleBounds('.source', update.nodeElement, zoom, nodeOrigin);
+            const target = getHandleBounds('.target', update.nodeElement, zoom, nodeOrigin);
             nodeInternals.set(node.id, {
               ...node,
               [internalsSymbol]: {
                 ...node[internalsSymbol],
                 handleBounds: {
-                  source: getHandleBounds('.source', update.nodeElement, zoom, nodeOrigin),
-                  target: getHandleBounds('.target', update.nodeElement, zoom, nodeOrigin),
+                  source: source,
+                  target: target,
                 },
               },
               ...dimensions,
             });
 
+            const handleRenderers = [...(source ?? []), ...(target ?? [])].reduce((acc, handle) => {
+              if (handle.nodeId && handle.rendererId && handle.id) {
+                acc[`${handle.nodeId}-${handle.id}`] = handle.rendererId;
+              }
+              return acc;
+            }, {} as ReactFlowState['handleRenderers']);
+
             res.push({
               id: node.id,
               type: 'dimensions',
               dimensions,
+              handleRenderers,
             });
           }
         }
@@ -101,12 +111,28 @@ const createRFStore = () =>
         return res;
       }, []);
 
+      const handleRenderers = changes.reduce<ReactFlowState['handleRenderers']>((acc, change) => {
+        if (change.handleRenderers) {
+          acc = { ...acc, ...change.handleRenderers };
+        }
+        return acc;
+      }, {} as ReactFlowState['handleRenderers']);
+
       updateAbsoluteNodePositions(nodeInternals, nodeOrigin);
 
       const nextFitViewOnInitDone =
         fitViewOnInitDone ||
         (fitViewOnInit && !fitViewOnInitDone && fitView(get, { initial: true, ...fitViewOnInitOptions }));
-      set({ nodeInternals: new Map(nodeInternals), fitViewOnInitDone: nextFitViewOnInitDone });
+      set((state) => ({
+        nodeInternals: new Map(nodeInternals),
+        fitViewOnInitDone: nextFitViewOnInitDone,
+        handleRenderers: {
+          ...state.handleRenderers,
+          ...handleRenderers,
+        },
+      }));
+
+      console.log('handleRenderers:', get().handleRenderers);
 
       if (changes?.length > 0) {
         onNodesChange?.(changes);

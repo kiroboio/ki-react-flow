@@ -45,6 +45,7 @@ const selector = (s: ReactFlowState) => ({
   height: s.height,
   connectionMode: s.connectionMode,
   nodeInternals: s.nodeInternals,
+  handleRenderers: s.handleRenderers,
   onError: s.onError,
 });
 
@@ -67,8 +68,17 @@ const EdgeRenderer = ({
   onEdgeUpdateEnd,
   children,
 }: EdgeRendererProps) => {
-  const { edgesFocusable, edgesUpdatable, elementsSelectable, width, height, connectionMode, nodeInternals, onError } =
-    useStore(selector, shallow);
+  const {
+    edgesFocusable,
+    edgesUpdatable,
+    elementsSelectable,
+    width,
+    height,
+    connectionMode,
+    nodeInternals,
+    handleRenderers,
+    onError,
+  } = useStore(selector, shallow);
   const edgeTree = useVisibleEdges(onlyRenderVisibleElements, nodeInternals, elevateEdgesOnSelect);
 
   if (!width) {
@@ -88,8 +98,22 @@ const EdgeRenderer = ({
           {isMaxLevel && <MarkerDefinitions defaultColor={defaultMarkerColor} rfId={rfId} />}
           <g>
             {edges.map((edge: Edge) => {
-              const [sourceNodeRect, sourceHandleBounds, sourceIsValid] = getNodeData(nodeInternals.get(edge.source));
-              const [targetNodeRect, targetHandleBounds, targetIsValid] = getNodeData(nodeInternals.get(edge.target));
+              console.log('edge:', edge)
+              const sourcePath = `${edge.source}-${edge.sourceHandle}`;
+              const sourceId = handleRenderers[sourcePath];
+              console.log('sourcePath:', sourcePath)
+              console.log('sourceId:', sourceId)
+              const targetPath = `${edge.target}-${edge.targetHandle}`;
+              const targetId = handleRenderers[targetPath];
+              console.log('targetId:', targetId);
+              console.log('handleRenderers:', handleRenderers);
+
+              const [sourceNodeRect, sourceHandleBounds, sourceIsValid] = getNodeData(
+                nodeInternals.get(sourceId || edge.source)
+              );
+              const [targetNodeRect, targetHandleBounds, targetIsValid] = getNodeData(
+                nodeInternals.get(targetId || edge.target)
+              );
 
               if (!sourceIsValid || !targetIsValid) {
                 return null;

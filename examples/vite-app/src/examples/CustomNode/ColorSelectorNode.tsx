@@ -15,7 +15,7 @@ const ColorSelectorNode: FC<NodeProps> = ({ data, isConnectable }) => {
   const onStart = useCallback((viewport: Viewport) => console.log('onStart', viewport), []);
   const onChange = useCallback((viewport: Viewport) => console.log('onChange', viewport), []);
   const onEnd = useCallback((viewport: Viewport) => console.log('onEnd', viewport), []);
-
+  console.log('nodeId:', data.nodeId);
   useOnViewportChange({
     onStart,
     onChange,
@@ -24,13 +24,14 @@ const ColorSelectorNode: FC<NodeProps> = ({ data, isConnectable }) => {
 
   return (
     <>
-      <Handle type="target" position={Position.Left} style={targetHandleStyle} onConnect={onConnect} />
+      <Handle type="target" nodeId={data.nodeId} position={Position.Left} style={targetHandleStyle} onConnect={onConnect} />
       <div>
         Custom Color Picker Node: <strong>{data.color}</strong>
       </div>
       <input className="nodrag" type="color" onChange={data.onChange} defaultValue={data.color} />
       <Handle
         type="source"
+        nodeId={data.nodeId}
         position={Position.Right}
         id="a"
         style={sourceHandleStyleA}
@@ -39,7 +40,14 @@ const ColorSelectorNode: FC<NodeProps> = ({ data, isConnectable }) => {
           console.log('You trigger mousedown event', e);
         }}
       />
-      <Handle type="source" position={Position.Right} id="b" style={sourceHandleStyleB} isConnectable={isConnectable} />
+      <Handle
+        nodeId={data.nodeId}
+        type="source"
+        position={Position.Right}
+        id="b"
+        style={sourceHandleStyleB}
+        isConnectable={isConnectable}
+      />
     </>
   );
 };

@@ -5,6 +5,8 @@ export type HandleType = 'source' | 'target';
 export type HandleElement = XYPosition &
   Dimensions & {
     id?: string | null;
+    nodeId?: string | null;
+    rendererId?: string | null;
     position: Position;
   };
 
@@ -23,4 +25,5 @@ export type HandleProps = {
   onConnect?: OnConnect;
   isValidConnection?: (connection: Connection) => boolean;
   id?: string;
+  nodeId?: string;
 };

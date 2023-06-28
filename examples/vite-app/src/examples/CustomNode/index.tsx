@@ -33,8 +33,20 @@ const nodeTypes = {
 const CustomNodeFlow = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
-
   const [bgColor, setBgColor] = useState<string>(initBgColor);
+
+  const add = () => {
+    setNodes((nodes) => [
+      ...nodes.filter((n) => n.id !== '2'),
+      {
+        id: '3',
+        type: 'selectorNode',
+        data: { onChange: () => {}, color: '#000' },
+        style: { border: '1px solid #777', padding: 10 },
+        position: { x: 250, y: 0 },
+      },
+    ]);
+  };
 
   useEffect(() => {
     const onChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -70,17 +82,11 @@ const CustomNodeFlow = () => {
       {
         id: '2',
         type: 'selectorNode',
-        data: { onChange: onChange, color: initBgColor },
+        data: { onChange: onChange, color: initBgColor, nodeId: '3' },
         style: { border: '1px solid #777', padding: 10 },
         position: { x: 250, y: 50 },
       },
-      {
-        id: '3',
-        type: 'output',
-        data: { label: 'Output A' },
-        position: { x: 550, y: 25 },
-        targetPosition: Position.Left,
-      },
+
       {
         id: '4',
         type: 'output',
@@ -100,15 +106,15 @@ const CustomNodeFlow = () => {
       },
       {
         id: 'e2a-3',
-        source: '2',
+        source: '3',
         sourceHandle: 'a',
-        target: '3',
+        target: '4',
         animated: true,
         style: { stroke: '#fff' },
       },
       {
         id: 'e2b-4',
-        source: '2',
+        source: '3',
         sourceHandle: 'b',
         target: '4',
         animated: true,
@@ -124,40 +130,50 @@ const CustomNodeFlow = () => {
   );
 
   return (
-    <ReactFlow
-      nodes={nodes}
-      edges={edges}
-      onNodesChange={onNodesChange}
-      onEdgesChange={onEdgesChange}
-      onNodeClick={onNodeClick}
-      onConnect={onConnect}
-      onNodeDragStop={onNodeDragStop}
-      style={{ background: bgColor }}
-      onInit={onInit}
-      nodeTypes={nodeTypes}
-      connectionLineStyle={connectionLineStyle}
-      snapToGrid={true}
-      snapGrid={snapGrid}
-      fitView
-      minZoom={0.3}
-      maxZoom={2}
-    >
-      <MiniMap
-        nodeStrokeColor={(n: Node): string => {
-          if (n.type === 'input') return '#0041d0';
-          if (n.type === 'selectorNode') return bgColor;
-          if (n.type === 'output') return '#ff0072';
-
-          return '#eee';
+    <>
+      <button
+        onClick={add}
+        style={{
+          zIndex: 999,
         }}
-        nodeColor={(n: Node): string => {
-          if (n.type === 'selectorNode') return bgColor;
+      >
+        Hi
+      </button>
+      <ReactFlow
+        nodes={nodes}
+        edges={edges}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        onNodeClick={onNodeClick}
+        onConnect={onConnect}
+        onNodeDragStop={onNodeDragStop}
+        style={{ background: bgColor }}
+        onInit={onInit}
+        nodeTypes={nodeTypes}
+        connectionLineStyle={connectionLineStyle}
+        snapToGrid={true}
+        snapGrid={snapGrid}
+        fitView
+        minZoom={0.3}
+        maxZoom={2}
+      >
+        <MiniMap
+          nodeStrokeColor={(n: Node): string => {
+            if (n.type === 'input') return '#0041d0';
+            if (n.type === 'selectorNode') return bgColor;
+            if (n.type === 'output') return '#ff0072';
 
-          return '#fff';
-        }}
-      />
-      <Controls />
-    </ReactFlow>
+            return '#eee';
+          }}
+          nodeColor={(n: Node): string => {
+            if (n.type === 'selectorNode') return bgColor;
+
+            return '#fff';
+          }}
+        />
+        <Controls />
+      </ReactFlow>
+    </>
   );
 };
 
