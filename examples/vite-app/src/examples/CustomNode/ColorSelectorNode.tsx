@@ -15,18 +15,26 @@ const ColorSelectorNode: FC<NodeProps> = ({ data, isConnectable }) => {
   const onStart = useCallback((viewport: Viewport) => console.log('onStart', viewport), []);
   const onChange = useCallback((viewport: Viewport) => console.log('onChange', viewport), []);
   const onEnd = useCallback((viewport: Viewport) => console.log('onEnd', viewport), []);
-  console.log('nodeId:', data.nodeId);
+
   useOnViewportChange({
     onStart,
     onChange,
     onEnd,
   });
 
+  const [show, setShow] = React.useState<boolean>(true);
   return (
     <>
-      <Handle type="target" nodeId={data.nodeId} position={Position.Left} style={targetHandleStyle} onConnect={onConnect} />
+      <Handle
+        type="target"
+        nodeId={data.nodeId}
+        position={Position.Left}
+        style={targetHandleStyle}
+        onConnect={onConnect}
+      />
       <div>
         Custom Color Picker Node: <strong>{data.color}</strong>
+        <button onClick={() => setShow((s) => !s)}>Toggle handle</button>
       </div>
       <input className="nodrag" type="color" onChange={data.onChange} defaultValue={data.color} />
       <Handle
@@ -40,14 +48,16 @@ const ColorSelectorNode: FC<NodeProps> = ({ data, isConnectable }) => {
           console.log('You trigger mousedown event', e);
         }}
       />
-      <Handle
-        nodeId={data.nodeId}
-        type="source"
-        position={Position.Right}
-        id="b"
-        style={sourceHandleStyleB}
-        isConnectable={isConnectable}
-      />
+      {show && (
+        <Handle
+          nodeId={data.nodeId}
+          type="source"
+          position={Position.Right}
+          id="b"
+          style={sourceHandleStyleB}
+          isConnectable={isConnectable}
+        />
+      )}
     </>
   );
 };

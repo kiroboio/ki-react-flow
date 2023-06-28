@@ -1,6 +1,6 @@
 {
   "name": "@sumbat/minimap",
-  "version": "11.5.4",
+  "version": "11.5.5",
   "description": "Minimap component for React Flow.",
   "keywords": [
     "react",

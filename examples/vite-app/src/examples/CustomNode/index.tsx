@@ -73,13 +73,6 @@ const CustomNodeFlow = () => {
 
     setNodes([
       {
-        id: '1',
-        type: 'input',
-        data: { label: 'An input node' },
-        position: { x: 0, y: 50 },
-        sourcePosition: Position.Right,
-      },
-      {
         id: '2',
         type: 'selectorNode',
         data: { onChange: onChange, color: initBgColor, nodeId: '3' },

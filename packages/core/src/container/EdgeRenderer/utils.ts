@@ -72,15 +72,19 @@ export function getHandlePosition(position: Position, nodeRect: Rect, handle: Ha
   }
 }
 
-export function getHandle(bounds: HandleElement[], handleId?: string | null): HandleElement | null {
+export function getHandle(
+  bounds: HandleElement[],
+  nodeId: string | null,
+  handleId?: string | null
+): HandleElement | null {
   if (!bounds) {
     return null;
   }
 
-  if (bounds.length === 1 || !handleId) {
+  if (bounds.length === 1 && !handleId) {
     return bounds[0];
   } else if (handleId) {
-    return bounds.find((d) => d.id === handleId) || null;
+    return bounds.find((d) => d.id === handleId && d.nodeId === nodeId) || null;
   }
 
   return null;

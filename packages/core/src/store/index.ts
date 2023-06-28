@@ -65,7 +65,6 @@ const createRFStore = () =>
 
       const style = window.getComputedStyle(viewportNode);
       const { m22: zoom } = new window.DOMMatrixReadOnly(style.transform);
-
       const changes: NodeDimensionChange[] = updates.reduce<NodeDimensionChange[]>((res, update) => {
         const node = nodeInternals.get(update.id);
 
@@ -80,7 +79,8 @@ const createRFStore = () =>
           if (doUpdate) {
             const source = getHandleBounds('.source', update.nodeElement, zoom, nodeOrigin);
             const target = getHandleBounds('.target', update.nodeElement, zoom, nodeOrigin);
-            nodeInternals.set(node.id, {
+
+            const nodeInternal = {
               ...node,
               [internalsSymbol]: {
                 ...node[internalsSymbol],
@@ -90,7 +90,9 @@ const createRFStore = () =>
                 },
               },
               ...dimensions,
-            });
+            };
+
+            nodeInternals.set(node.id, nodeInternal);
 
             const handleRenderers = [...(source ?? []), ...(target ?? [])].reduce((acc, handle) => {
               if (handle.nodeId && handle.rendererId && handle.id) {
@@ -131,8 +133,6 @@ const createRFStore = () =>
           ...handleRenderers,
         },
       }));
-
-      console.log('handleRenderers:', get().handleRenderers);
 
       if (changes?.length > 0) {
         onNodesChange?.(changes);

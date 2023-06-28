@@ -1,4 +1,11 @@
-import { memo, HTMLAttributes, forwardRef, MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent } from 'react';
+import {
+  memo,
+  HTMLAttributes,
+  forwardRef,
+  MouseEvent as ReactMouseEvent,
+  TouchEvent as ReactTouchEvent,
+  useEffect,
+} from 'react';
 import cc from 'classcat';
 import { shallow } from 'zustand/shallow';
 
@@ -10,6 +17,7 @@ import { addEdge } from '../../utils/graph';
 import { type HandleProps, type Connection, type ReactFlowState, HandleType, Position } from '../../types';
 import { getClosestHandle, isValidHandle } from './utils';
 import { errorMessages } from '../../contants';
+import useUpdateNodeInternals from '../../hooks/useUpdateNodeInternals';
 
 const alwaysValid = () => true;
 
@@ -65,6 +73,14 @@ const Handle = forwardRef<HTMLDivElement, HandleComponentProps>(
     const nodeId = _nodeId || useNodeId();
     const { connectOnClick, noPanClassName } = useStore(selector, shallow);
     const { connecting, clickConnecting } = useStore(connectingSelector(nodeId, handleId, type), shallow);
+    const updateNodeInternals = useUpdateNodeInternals();
+
+    useEffect(() => {
+      rendererId && updateNodeInternals(rendererId);
+      return () => {
+        rendererId && updateNodeInternals(rendererId);
+      };
+    }, []);
 
     if (!nodeId) {
       store.getState().onError?.('010', errorMessages['error010']());

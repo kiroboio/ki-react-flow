@@ -98,22 +98,15 @@ const EdgeRenderer = ({
           {isMaxLevel && <MarkerDefinitions defaultColor={defaultMarkerColor} rfId={rfId} />}
           <g>
             {edges.map((edge: Edge) => {
-              console.log('edge:', edge)
               const sourcePath = `${edge.source}-${edge.sourceHandle}`;
               const sourceId = handleRenderers[sourcePath];
-              console.log('sourcePath:', sourcePath)
-              console.log('sourceId:', sourceId)
               const targetPath = `${edge.target}-${edge.targetHandle}`;
               const targetId = handleRenderers[targetPath];
-              console.log('targetId:', targetId);
-              console.log('handleRenderers:', handleRenderers);
 
-              const [sourceNodeRect, sourceHandleBounds, sourceIsValid] = getNodeData(
-                nodeInternals.get(sourceId || edge.source)
-              );
-              const [targetNodeRect, targetHandleBounds, targetIsValid] = getNodeData(
-                nodeInternals.get(targetId || edge.target)
-              );
+              const sourceInternals = nodeInternals.get(sourceId || edge.source);
+              const [sourceNodeRect, sourceHandleBounds, sourceIsValid] = getNodeData(sourceInternals);
+              const targetInternals = nodeInternals.get(targetId || edge.target);
+              const [targetNodeRect, targetHandleBounds, targetIsValid] = getNodeData(targetInternals);
 
               if (!sourceIsValid || !targetIsValid) {
                 return null;
@@ -132,17 +125,20 @@ const EdgeRenderer = ({
                 connectionMode === ConnectionMode.Strict
                   ? targetHandleBounds!.target
                   : (targetHandleBounds!.target ?? []).concat(targetHandleBounds!.source ?? []);
-              const sourceHandle = getHandle(sourceHandleBounds!.source!, edge.sourceHandle);
-              const targetHandle = getHandle(targetNodeHandles!, edge.targetHandle);
+
+              const sourceHandle = getHandle(sourceHandleBounds!.source!, edge.source, edge.sourceHandle);
+              const targetHandle = getHandle(targetNodeHandles!, edge.target, edge.targetHandle);
+
               const sourcePosition = sourceHandle?.position || Position.Bottom;
               const targetPosition = targetHandle?.position || Position.Top;
+
               const isFocusable = !!(edge.focusable || (edgesFocusable && typeof edge.focusable === 'undefined'));
               const isUpdatable =
                 typeof onEdgeUpdate !== 'undefined' &&
                 (edge.updatable || (edgesUpdatable && typeof edge.updatable === 'undefined'));
 
               if (!sourceHandle || !targetHandle) {
-                onError?.('008', errorMessages['error008'](sourceHandle, edge));
+                // onError?.('008', errorMessages['error008'](sourceHandle, edge));
 
                 return null;
               }

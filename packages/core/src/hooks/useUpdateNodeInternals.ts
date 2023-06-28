@@ -8,7 +8,6 @@ function useUpdateNodeInternals(): UpdateNodeInternals {
 
   return useCallback<UpdateNodeInternals>((id: string | string[]) => {
     const { domNode, updateNodeDimensions } = store.getState();
-
     const updateIds = Array.isArray(id) ? id : [id];
     const updates = updateIds.reduce<NodeDimensionUpdate[]>((res, updateId) => {
       const nodeElement = domNode?.querySelector(`.react-flow__node[data-id="${updateId}"]`) as HTMLDivElement;
