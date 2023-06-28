@@ -3,7 +3,7 @@ import { DragEvent } from 'react';
 import styles from './dnd.module.css';
 
 const onDragStart = (event: DragEvent, nodeType: string) => {
-  event.dataTransfer.setData('application/reactflow', nodeType);
+  event.dataTransfer.setData('application/@sumbat/reactflow', nodeType);
   event.dataTransfer.effectAllowed = 'move';
 };
 

@@ -267,7 +267,7 @@ const routes: IRoute[] = [
   },
   {
     name: 'useReactFlow',
-    path: '/usereactflow',
+    path: '/use@sumbat/reactflow',
     component: UseReactFlow,
   },
   {

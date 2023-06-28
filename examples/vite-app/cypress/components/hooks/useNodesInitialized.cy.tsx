@@ -1,4 +1,4 @@
-import ReactFlow, { useNodesInitialized } from 'reactflow';
+import ReactFlow, { useNodesInitialized } from '@sumbat/reactflow';
 
 import { nodes } from '../../fixtures/simpleflow';
 import ControlledFlow from '../../support/ControlledFlow';

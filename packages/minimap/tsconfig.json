@@ -1,6 +1,6 @@
 {
-  "extends": "@reactflow/tsconfig/react.json",
-  "display": "@reactflow/minimap",
+  "extends": "@sumbat/tsconfig/react.json",
+  "display": "@sumbat/minimap",
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "dist"]
 }

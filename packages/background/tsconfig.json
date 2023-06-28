@@ -1,6 +1,6 @@
 {
-  "extends": "@reactflow/tsconfig/react.json",
-  "display": "@reactflow/background",
+  "extends": "@sumbat/tsconfig/react.json",
+  "display": "@sumbat/background",
   "include": ["src"],
   "exclude": ["node_modules", "dist"]
 }

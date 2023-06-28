@@ -10,7 +10,7 @@ import ReactFlow, {
   Connection,
   useNodesState,
   useEdgesState,
-} from 'reactflow';
+} from '@sumbat/reactflow';
 
 import ColorSelectorNode from './ColorSelectorNode';
 

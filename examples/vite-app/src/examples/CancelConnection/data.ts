@@ -1,4 +1,4 @@
-import { Edge, Node } from 'reactflow';
+import { Edge, Node } from '@sumbat/reactflow';
 
 export const initialNodes: Node[] = [
   {

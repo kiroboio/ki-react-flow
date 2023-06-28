@@ -1,4 +1,4 @@
-import { Edge, Node, Position } from 'reactflow';
+import { Edge, Node, Position } from '@sumbat/reactflow';
 
 const nodeWidth = 80;
 const nodeGapWidth = nodeWidth * 2;

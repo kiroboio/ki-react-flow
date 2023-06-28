@@ -9,7 +9,7 @@ import ReactFlow, {
   useEdgesState,
   useOnSelectionChange,
   OnSelectionChangeParams,
-} from 'reactflow';
+} from '@sumbat/reactflow';
 
 const initialNodes: Node[] = [
   {

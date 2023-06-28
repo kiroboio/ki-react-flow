@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { getBezierPath, ConnectionLineComponentProps, Node } from 'reactflow';
+import { getBezierPath, ConnectionLineComponentProps, Node } from '@sumbat/reactflow';
 
 import { getEdgeParams } from './utils';
 

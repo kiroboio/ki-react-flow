@@ -41,7 +41,7 @@ export const getIncomers = <T = any, U extends T = T>(node: Node<U>, nodes: Node
 };
 
 const getEdgeId = ({ source, sourceHandle, target, targetHandle }: Connection): string =>
-  `reactflow__edge-${source}${sourceHandle || ''}-${target}${targetHandle || ''}`;
+  `@sumbat/reactflow__edge-${source}${sourceHandle || ''}-${target}${targetHandle || ''}`;
 
 export const getMarkerId = (marker: EdgeMarkerType | undefined, rfId?: string): string => {
   if (typeof marker === 'undefined') {

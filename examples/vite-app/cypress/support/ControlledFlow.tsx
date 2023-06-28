@@ -10,7 +10,7 @@ import {
   Connection,
   addEdge,
   ReactFlowProps,
-} from 'reactflow';
+} from '@sumbat/reactflow';
 
 function ControlledFlow({
   addOnNodeChangeHandler = true,

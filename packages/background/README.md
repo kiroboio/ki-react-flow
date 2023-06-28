@@ -1,10 +1,10 @@
-# @reactflow/background
+# @sumbat/background
 
 Background component for React Flow.
 
 ## Installation 
 
 ```sh 
-npm install @reactflow/background
+npm install @sumbat/background
 ```
 

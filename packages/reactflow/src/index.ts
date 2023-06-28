@@ -1,8 +1,8 @@
-export * from '@reactflow/core';
-export * from '@reactflow/minimap';
-export * from '@reactflow/controls';
-export * from '@reactflow/background';
-export * from '@reactflow/node-toolbar';
-export * from '@reactflow/node-resizer';
+export * from '@sumbat/core';
+export * from '@sumbat/minimap';
+export * from '@sumbat/controls';
+export * from '@sumbat/background';
+export * from '@sumbat/node-toolbar';
+export * from '@sumbat/node-resizer';
 
-export { ReactFlow as default } from '@reactflow/core';
+export { ReactFlow as default } from '@sumbat/core';

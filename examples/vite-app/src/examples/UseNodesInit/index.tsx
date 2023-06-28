@@ -10,7 +10,7 @@ import ReactFlow, {
   useEdgesState,
   OnConnect,
   useNodesInitialized,
-} from 'reactflow';
+} from '@sumbat/reactflow';
 
 const initialNodes: Node[] = [
   {

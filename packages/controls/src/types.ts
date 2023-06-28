@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes, HTMLAttributes } from 'react';
-import type { FitViewOptions, PanelPosition } from '@reactflow/core';
+import type { FitViewOptions, PanelPosition } from '@sumbat/core';
 
 export type ControlProps = HTMLAttributes<HTMLDivElement> & {
   showZoom?: boolean;

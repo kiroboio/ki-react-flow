@@ -10,7 +10,7 @@ import ReactFlow, {
   useEdgesState,
   Controls,
   MiniMap,
-} from 'reactflow';
+} from '@sumbat/reactflow';
 
 const initialNodes: Node[] = [
   {

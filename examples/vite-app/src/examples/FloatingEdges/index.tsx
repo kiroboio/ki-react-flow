@@ -8,7 +8,7 @@ import ReactFlow, {
   Connection,
   useNodesState,
   useEdgesState,
-} from 'reactflow';
+} from '@sumbat/reactflow';
 
 import styles from './style.module.css';
 

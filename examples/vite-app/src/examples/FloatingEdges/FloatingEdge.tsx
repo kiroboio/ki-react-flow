@@ -1,5 +1,5 @@
 import { FC, useMemo, CSSProperties } from 'react';
-import { EdgeProps, useStore, getBezierPath, ReactFlowState } from 'reactflow';
+import { EdgeProps, useStore, getBezierPath, ReactFlowState } from '@sumbat/reactflow';
 
 import { getEdgeParams } from './utils';
 

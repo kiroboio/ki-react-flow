@@ -8,7 +8,7 @@ import ReactFlow, {
   NodeTypes,
   Position,
   NodeOrigin,
-} from 'reactflow';
+} from '@sumbat/reactflow';
 
 import CustomNode from './CustomNode';
 import SelectedNodesToolbar from './SelectedNodesToolbar';

@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { memo } from 'react';
 import { shallow } from 'zustand/shallow';
-import { useStore, getNodePositionWithOrigin, type ReactFlowState } from '@reactflow/core';
+import { useStore, getNodePositionWithOrigin, type ReactFlowState } from '@sumbat/core';
 
 import MiniMapNode from './MiniMapNode';
 import type { MiniMapNodes, GetMiniMapNodeAttribute } from './types';

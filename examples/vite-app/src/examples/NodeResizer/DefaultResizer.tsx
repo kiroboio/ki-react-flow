@@ -1,5 +1,5 @@
 import { memo, FC } from 'react';
-import { Handle, Position, NodeProps, NodeResizer } from 'reactflow';
+import { Handle, Position, NodeProps, NodeResizer } from '@sumbat/reactflow';
 
 const DefaultResizerNode: FC<NodeProps> = ({ data, selected }) => {
   return (

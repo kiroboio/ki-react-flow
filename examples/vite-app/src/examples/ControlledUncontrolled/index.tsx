@@ -7,7 +7,7 @@ import ReactFlow, {
   useEdgesState,
   Background,
   BackgroundVariant,
-} from 'reactflow';
+} from '@sumbat/reactflow';
 
 const defaultNodes: Node[] = [
   {

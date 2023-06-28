@@ -10,7 +10,7 @@ import {
   useNodeId,
   NodePositionChange,
   clamp,
-} from '@reactflow/core';
+} from '@sumbat/core';
 
 import { ResizeDragEvent, ResizeControlProps, ResizeControlLineProps, ResizeControlVariant } from './types';
 import { getDirection } from './utils';

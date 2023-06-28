@@ -1,4 +1,4 @@
-import { ConnectionLineComponentProps } from 'reactflow';
+import { ConnectionLineComponentProps } from '@sumbat/reactflow';
 
 function ConnectionLine({ fromX, fromY, toX, toY }: ConnectionLineComponentProps) {
   return (

@@ -1,10 +1,10 @@
-# @reactflow/controls
+# @sumbat/controls
 
 Controls component for React Flow.
 
 ## Installation 
 
 ```sh 
-npm install @reactflow/controls
+npm install @sumbat/controls
 ```
 

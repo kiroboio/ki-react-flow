@@ -6,7 +6,7 @@ import ReactFlow, {
   Background,
   BackgroundVariant,
   Panel,
-} from 'reactflow';
+} from '@sumbat/reactflow';
 
 const defaultNodes: Node[] = [
   {

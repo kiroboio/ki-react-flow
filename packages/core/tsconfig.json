@@ -1,6 +1,6 @@
 {
-  "extends": "@reactflow/tsconfig/react.json",
-  "display": "@reactflow/core",
+  "extends": "@sumbat/tsconfig/react.json",
+  "display": "@sumbat/core",
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "dist"]
 }

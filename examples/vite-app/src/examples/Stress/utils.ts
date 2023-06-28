@@ -1,4 +1,4 @@
-import { Node, Edge } from 'reactflow';
+import { Node, Edge } from '@sumbat/reactflow';
 
 type ElementsCollection = {
   nodes: Node[];
