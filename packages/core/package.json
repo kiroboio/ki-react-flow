@@ -1,6 +1,6 @@
 {
   "name": "@sumbat/core",
-  "version": "11.7.6",
+  "version": "11.7.8",
   "description": "Core components and util functions of React Flow.",
   "keywords": [
     "react",

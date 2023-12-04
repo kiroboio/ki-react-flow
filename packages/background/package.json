@@ -1,6 +1,6 @@
 {
   "name": "@sumbat/background",
-  "version": "11.2.5",
+  "version": "11.2.6",
   "description": "Background component with different variants for React Flow",
   "keywords": [
     "react",

@@ -66,8 +66,8 @@ const ConnectionLine = ({
   if (!fromNode || !handleBounds) {
     return null;
   }
-
-  const fromHandle = handleId ? handleBounds.find((d) => d.id === handleId) : handleBounds[0];
+  console.log('handleBounds:', handleBounds);
+  const fromHandle = handleId ? handleBounds.find((d) => d.id === handleId && d.nodeId === nodeId) : handleBounds[0];
   const fromHandleX = fromHandle ? fromHandle.x + fromHandle.width / 2 : (fromNode.width ?? 0) / 2;
   const fromHandleY = fromHandle ? fromHandle.y + fromHandle.height / 2 : fromNode.height ?? 0;
   const fromX = (fromNode.positionAbsolute?.x ?? 0) + fromHandleX;
