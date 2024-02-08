@@ -8,7 +8,7 @@ import ReactFlow, {
   Edge,
   useReactFlow,
   useNodesState,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 import './style.css';
 

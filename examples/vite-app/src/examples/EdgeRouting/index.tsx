@@ -1,4 +1,4 @@
-import ReactFlow, { Node, Edge, Position, MarkerType } from '@sumbat/reactflow';
+import ReactFlow, { Node, Edge, Position, MarkerType } from '@kiroboio/reactflow';
 
 const nodes: Node[] = [
   // LTR

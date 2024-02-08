@@ -1,10 +1,10 @@
-# @sumbat/controls
+# @kiroboio/controls
 
 Controls component for React Flow.
 
 ## Installation 
 
 ```sh 
-npm install @sumbat/controls
+npm install @kiroboio/controls
 ```
 

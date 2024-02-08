@@ -1,6 +1,6 @@
 {
-  "extends": "@sumbat/tsconfig/react.json",
-  "display": "@sumbat/core",
+  "extends": "@kiroboio/tsconfig/react.json",
+  "display": "@kiroboio/core",
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "dist"]
 }

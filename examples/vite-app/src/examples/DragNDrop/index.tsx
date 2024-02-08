@@ -10,7 +10,7 @@ import ReactFlow, {
   useEdgesState,
   Controls,
   NodeOrigin,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 import Sidebar from './Sidebar';
 
@@ -47,7 +47,7 @@ const DnDFlow = () => {
     event.preventDefault();
 
     if (reactFlowInstance) {
-      const type = event.dataTransfer.getData('application/@sumbat/reactflow');
+      const type = event.dataTransfer.getData('application/@kiroboio/reactflow');
       const position = reactFlowInstance.project({
         x: event.clientX,
         y: event.clientY - 40,

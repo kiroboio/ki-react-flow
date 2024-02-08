@@ -1,4 +1,4 @@
-import { useReactFlow, useStore } from '@sumbat/reactflow';
+import { useReactFlow, useStore } from '@kiroboio/reactflow';
 
 import styles from './provider.module.css';
 

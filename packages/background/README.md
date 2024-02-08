@@ -1,10 +1,10 @@
-# @sumbat/background
+# @kiroboio/background
 
 Background component for React Flow.
 
 ## Installation 
 
 ```sh 
-npm install @sumbat/background
+npm install @kiroboio/background
 ```
 

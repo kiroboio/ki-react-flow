@@ -8,7 +8,7 @@ import ReactFlow, {
   useEdgesState,
   Background,
   BackgroundVariant,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 import ConnectionLine from './ConnectionLine';
 

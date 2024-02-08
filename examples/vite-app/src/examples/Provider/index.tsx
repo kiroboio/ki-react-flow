@@ -10,7 +10,7 @@ import ReactFlow, {
   useNodesState,
   useEdgesState,
   ReactFlowInstance,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 import Sidebar from './Sidebar';
 

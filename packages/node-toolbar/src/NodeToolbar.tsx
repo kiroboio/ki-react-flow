@@ -9,7 +9,7 @@ import {
   Position,
   internalsSymbol,
   useNodeId,
-} from '@sumbat/core';
+} from '@kiroboio/core';
 import cc from 'classcat';
 import { shallow } from 'zustand/shallow';
 

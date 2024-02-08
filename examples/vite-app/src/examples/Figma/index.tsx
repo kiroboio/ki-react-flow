@@ -1,4 +1,4 @@
-import ReactFlow, { Background, BackgroundVariant, Node, Edge, SelectionMode } from '@sumbat/reactflow';
+import ReactFlow, { Background, BackgroundVariant, Node, Edge, SelectionMode } from '@kiroboio/reactflow';
 
 const MULTI_SELECT_KEY = ['Meta', 'Shift'];
 

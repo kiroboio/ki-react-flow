@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes, HTMLAttributes } from 'react';
-import type { FitViewOptions, PanelPosition } from '@sumbat/core';
+import type { FitViewOptions, PanelPosition } from '@kiroboio/core';
 
 export type ControlProps = HTMLAttributes<HTMLDivElement> & {
   showZoom?: boolean;

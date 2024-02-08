@@ -1,5 +1,5 @@
 import React, { memo, useCallback, Dispatch, FC } from 'react';
-import { useReactFlow, Edge, Node, ReactFlowJsonObject } from '@sumbat/reactflow';
+import { useReactFlow, Edge, Node, ReactFlowJsonObject } from '@kiroboio/reactflow';
 import localforage from 'localforage';
 
 import styles from './save.module.css';

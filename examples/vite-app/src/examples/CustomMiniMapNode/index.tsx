@@ -13,7 +13,7 @@ import ReactFlow, {
   ReactFlowInstance,
   useEdgesState,
   useNodesState,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 const onInit = (reactFlowInstance: ReactFlowInstance) => console.log('flow loaded:', reactFlowInstance);
 const onNodeClick = (_: MouseEvent, node: Node) => console.log('click', node);

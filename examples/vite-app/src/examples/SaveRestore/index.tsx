@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import ReactFlow, { ReactFlowProvider, Node, addEdge, Connection, Edge, useNodesState, useEdgesState } from '@sumbat/reactflow';
+import ReactFlow, { ReactFlowProvider, Node, addEdge, Connection, Edge, useNodesState, useEdgesState } from '@kiroboio/reactflow';
 
 import Controls from './Controls';
 

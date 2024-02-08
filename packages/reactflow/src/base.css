@@ -1,4 +1,4 @@
-@import '@sumbat/core/dist/base.css';
-@import '@sumbat/controls/dist/style.css';
-@import '@sumbat/minimap/dist/style.css';
-@import '@sumbat/node-resizer/dist/style.css';
+@import '@kiroboio/core/dist/base.css';
+@import '@kiroboio/controls/dist/style.css';
+@import '@kiroboio/minimap/dist/style.css';
+@import '@kiroboio/node-resizer/dist/style.css';

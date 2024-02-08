@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 
 import './index.css';
-import '@sumbat/reactflow/dist/style.css';
+import '@kiroboio/reactflow/dist/style.css';
 
 createRoot(document.getElementById('root') as HTMLElement).render(
   <StrictMode>

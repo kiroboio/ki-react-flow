@@ -1,11 +1,11 @@
 import { useCallback } from 'react';
-import ReactFlow, { Node, Edge, addEdge, useNodesState, useEdgesState, MarkerType, OnConnect } from '@sumbat/reactflow';
+import ReactFlow, { Node, Edge, addEdge, useNodesState, useEdgesState, MarkerType, OnConnect } from '@kiroboio/reactflow';
 
 import CustomNode from './CustomNode';
 import FloatingEdge from './FloatingEdge';
 import CustomConnectionLine from './CustomConnectionLine';
 
-import '@sumbat/reactflow/dist/style.css';
+import '@kiroboio/reactflow/dist/style.css';
 import './style.css';
 
 const initialNodes: Node[] = [

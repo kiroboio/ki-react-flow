@@ -1,6 +1,6 @@
 {
-  "extends": "@sumbat/tsconfig/react.json",
-  "display": "@sumbat/minimap",
+  "extends": "@kiroboio/tsconfig/react.json",
+  "display": "@kiroboio/minimap",
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "dist"]
 }

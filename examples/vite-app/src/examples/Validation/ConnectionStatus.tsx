@@ -1,4 +1,4 @@
-import { ReactFlowState, useStore } from '@sumbat/reactflow';
+import { ReactFlowState, useStore } from '@kiroboio/reactflow';
 import { shallow } from 'zustand/shallow';
 
 import styles from './validation.module.css';

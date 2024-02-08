@@ -11,7 +11,7 @@ import ReactFlow, {
   useEdgesState,
   MarkerType,
   MiniMap,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 import styles from './multiflows.module.css';
 

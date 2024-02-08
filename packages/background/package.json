@@ -1,5 +1,5 @@
 {
-  "name": "@sumbat/background",
+  "name": "@kiroboio/background",
   "version": "11.2.7",
   "description": "Background component with different variants for React Flow",
   "keywords": [
@@ -21,8 +21,8 @@
     "*.css"
   ],
   "scripts": {
-    "dev": "rollup --config node:@sumbat/rollup-config --watch",
-    "build": "rollup --config node:@sumbat/rollup-config --environment NODE_ENV:production",
+    "dev": "rollup --config node:@kiroboio/rollup-config --watch",
+    "build": "rollup --config node:@kiroboio/rollup-config --environment NODE_ENV:production",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "typecheck": "tsc --noEmit",
     "clean": "rimraf dist .turbo"
@@ -37,14 +37,14 @@
     "directory": "packages/background"
   },
   "dependencies": {
-    "@sumbat/core": "workspace:*",
+    "@kiroboio/core": "workspace:*",
     "classcat": "^5.0.3",
     "zustand": "^4.3.1"
   },
   "devDependencies": {
-    "@sumbat/eslint-config": "workspace:*",
-    "@sumbat/rollup-config": "workspace:*",
-    "@sumbat/tsconfig": "workspace:*",
+    "@kiroboio/eslint-config": "workspace:*",
+    "@kiroboio/rollup-config": "workspace:*",
+    "@kiroboio/tsconfig": "workspace:*",
     "@types/node": "^18.7.16",
     "@types/react": ">=17",
     "react": "^18.2.0",

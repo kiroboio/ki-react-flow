@@ -1,5 +1,5 @@
 import { CSSProperties, useCallback } from 'react';
-import ReactFlow, { addEdge, Node, Position, Connection, Edge, useNodesState, useEdgesState } from '@sumbat/reactflow';
+import ReactFlow, { addEdge, Node, Position, Connection, Edge, useNodesState, useEdgesState } from '@kiroboio/reactflow';
 
 const initialNodes: Node[] = [
   {

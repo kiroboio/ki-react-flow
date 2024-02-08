@@ -1,4 +1,4 @@
-import { Position } from '@sumbat/core';
+import { Position } from '@kiroboio/core';
 import type { HTMLAttributes } from 'react';
 
 export type NodeToolbarProps = HTMLAttributes<HTMLDivElement> & {

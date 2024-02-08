@@ -1,4 +1,4 @@
-import { Node, Edge, isNode, isEdge, getOutgoers, getIncomers, addEdge } from '@sumbat/reactflow';
+import { Node, Edge, isNode, isEdge, getOutgoers, getIncomers, addEdge } from '@kiroboio/reactflow';
 
 const nodes: Node[] = [
   {

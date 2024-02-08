@@ -1,4 +1,4 @@
-import { Handle, NodeProps, Position, ReactFlowState, useStore } from '@sumbat/reactflow';
+import { Handle, NodeProps, Position, ReactFlowState, useStore } from '@kiroboio/reactflow';
 
 const connectionNodeIdSelector = (state: ReactFlowState) => state.connectionNodeId;
 

@@ -1,4 +1,4 @@
-import ReactFlow, { BaseEdge, EdgeLabelRenderer, EdgeProps, getSmoothStepPath, ReactFlowProvider } from '@sumbat/reactflow';
+import ReactFlow, { BaseEdge, EdgeLabelRenderer, EdgeProps, getSmoothStepPath, ReactFlowProvider } from '@kiroboio/reactflow';
 import * as simpleflow from '../../fixtures/simpleflow';
 
 function CustomEdge(props: EdgeProps) {

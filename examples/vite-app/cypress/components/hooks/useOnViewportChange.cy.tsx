@@ -1,4 +1,4 @@
-import ReactFlow, { useOnViewportChange, Viewport } from '@sumbat/reactflow';
+import ReactFlow, { useOnViewportChange, Viewport } from '@kiroboio/reactflow';
 
 describe('useOnViewportChange.cy.tsx', () => {
   it('listen to viewport drag', () => {

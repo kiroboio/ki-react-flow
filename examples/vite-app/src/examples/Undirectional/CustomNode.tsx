@@ -1,6 +1,6 @@
 import React, { memo, FC, CSSProperties } from 'react';
 
-import { Handle, Position, NodeProps } from '@sumbat/reactflow';
+import { Handle, Position, NodeProps } from '@kiroboio/reactflow';
 
 const nodeStyles: CSSProperties = {
   padding: '10px 15px',

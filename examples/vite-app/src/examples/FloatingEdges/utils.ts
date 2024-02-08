@@ -1,4 +1,4 @@
-import { Position, XYPosition, Node, Edge } from '@sumbat/reactflow';
+import { Position, XYPosition, Node, Edge } from '@kiroboio/reactflow';
 
 // this helper function returns the intersection point
 // of the line between the center of the intersectionNode and the target node

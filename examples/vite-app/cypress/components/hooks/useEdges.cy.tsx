@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ReactFlow, { Edge, useEdges } from '@sumbat/reactflow';
+import ReactFlow, { Edge, useEdges } from '@kiroboio/reactflow';
 
 import { nodes as initialNodes, edges as initialEdges } from '../../fixtures/simpleflow';
 

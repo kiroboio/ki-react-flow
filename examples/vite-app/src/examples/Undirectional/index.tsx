@@ -12,7 +12,7 @@ import ReactFlow, {
   updateEdge,
   useNodesState,
   useEdgesState,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 import CustomNode from './CustomNode';
 

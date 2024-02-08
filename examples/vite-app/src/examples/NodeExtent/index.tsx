@@ -11,7 +11,7 @@ import ReactFlow, {
   Background,
   CoordinateExtent,
   NodeOrigin,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 import DebugNode from './DebugNode';
 

@@ -10,7 +10,7 @@ import ReactFlow, {
   Connection,
   useNodesState,
   useEdgesState,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 import ColorSelectorNode from './ColorSelectorNode';
 

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { ComponentType, CSSProperties, HTMLAttributes, MouseEvent } from 'react';
-import type { Node, PanelPosition, XYPosition } from '@sumbat/core';
+import type { Node, PanelPosition, XYPosition } from '@kiroboio/core';
 
 export type GetMiniMapNodeAttribute<NodeData = any> = (node: Node<NodeData>) => string;
 

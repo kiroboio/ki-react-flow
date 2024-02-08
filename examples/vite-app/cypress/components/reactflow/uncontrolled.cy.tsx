@@ -1,4 +1,4 @@
-import ReactFlow from '@sumbat/reactflow';
+import ReactFlow from '@kiroboio/reactflow';
 
 import { nodes, edges } from '../../fixtures/simpleflow';
 

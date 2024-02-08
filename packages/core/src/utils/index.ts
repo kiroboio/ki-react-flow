@@ -91,7 +91,7 @@ export const elementSelectionKeys = ['Enter', ' ', 'Escape'];
 
 export const devWarn = (id: string, message: string) => {
   if (process.env.NODE_ENV === 'development') {
-    console.warn(`[React Flow]: ${message} Help: https://@sumbat/reactflow.dev/error#${id}`);
+    console.warn(`[React Flow]: ${message} Help: https://@kiroboio/reactflow.dev/error#${id}`);
   }
 };
 

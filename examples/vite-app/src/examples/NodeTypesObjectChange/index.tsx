@@ -9,7 +9,7 @@ import ReactFlow, {
   NodeTypes,
   useNodesState,
   useEdgesState,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 const initialNodes: Node[] = [
   {

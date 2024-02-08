@@ -14,7 +14,7 @@ import ReactFlow, {
   OnConnect,
   updateEdge,
   Edge,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 import ConnectionStatus from './ConnectionStatus';
 

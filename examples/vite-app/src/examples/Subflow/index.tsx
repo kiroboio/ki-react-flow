@@ -12,7 +12,7 @@ import ReactFlow, {
   MiniMap,
   Background,
   Panel,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 import DebugNode from './DebugNode';
 

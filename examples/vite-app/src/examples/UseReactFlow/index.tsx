@@ -11,7 +11,7 @@ import ReactFlow, {
   useNodesState,
   useEdgesState,
   Panel,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 const initialNodes: Node[] = [
   {

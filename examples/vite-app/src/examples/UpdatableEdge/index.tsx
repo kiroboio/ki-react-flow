@@ -12,7 +12,7 @@ import ReactFlow, {
   NodeChange,
   EdgeChange,
   HandleType,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 const initialNodes: Node[] = [
   {

@@ -1,6 +1,6 @@
 {
-  "extends": "@sumbat/tsconfig/react.json",
-  "display": "@sumbat/node-toolbar",
+  "extends": "@kiroboio/tsconfig/react.json",
+  "display": "@kiroboio/node-toolbar",
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "dist"]
 }

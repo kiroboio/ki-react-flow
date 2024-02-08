@@ -1,5 +1,5 @@
 {
-  "name": "@sumbat/minimap",
+  "name": "@kiroboio/minimap",
   "version": "11.5.7",
   "description": "Minimap component for React Flow.",
   "keywords": [
@@ -30,15 +30,15 @@
     "directory": "packages/minimap"
   },
   "scripts": {
-    "dev": "concurrently \"rollup --config node:@sumbat/rollup-config --watch\" pnpm:css-watch",
-    "build": "rollup --config node:@sumbat/rollup-config --environment NODE_ENV:production && npm run css",
+    "dev": "concurrently \"rollup --config node:@kiroboio/rollup-config --watch\" pnpm:css-watch",
+    "build": "rollup --config node:@kiroboio/rollup-config --environment NODE_ENV:production && npm run css",
     "css": "postcss src/*.css --config ../../tooling/postcss-config/postcss.config.js --dir dist",
     "css-watch": "pnpm css --watch",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@sumbat/core": "workspace:*",
+    "@kiroboio/core": "workspace:*",
     "@types/d3-selection": "^3.0.3",
     "@types/d3-zoom": "^3.0.1",
     "classcat": "^5.0.3",
@@ -51,9 +51,9 @@
     "react-dom": ">=17"
   },
   "devDependencies": {
-    "@sumbat/eslint-config": "workspace:*",
-    "@sumbat/rollup-config": "workspace:*",
-    "@sumbat/tsconfig": "workspace:*",
+    "@kiroboio/eslint-config": "workspace:*",
+    "@kiroboio/rollup-config": "workspace:*",
+    "@kiroboio/tsconfig": "workspace:*",
     "@types/node": "^18.7.16",
     "@types/react": ">=17",
     "react": "^18.2.0",

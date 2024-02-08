@@ -7,7 +7,7 @@ import ReactFlow, {
   Background,
   BackgroundProps,
   BackgroundVariant,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 import styles from './style.module.css';
 

@@ -1,7 +1,7 @@
 import { memo, useEffect, useState, type FC, type PropsWithChildren } from 'react';
 import cc from 'classcat';
 import { shallow } from 'zustand/shallow';
-import { useStore, useStoreApi, useReactFlow, Panel, type ReactFlowState } from '@sumbat/core';
+import { useStore, useStoreApi, useReactFlow, Panel, type ReactFlowState } from '@kiroboio/core';
 
 import PlusIcon from './Icons/Plus';
 import MinusIcon from './Icons/Minus';

@@ -1,4 +1,4 @@
-import ReactFlow, { ReactFlowProps, Viewport, useViewport, SnapGrid, CoordinateExtent, Node } from '@sumbat/reactflow';
+import ReactFlow, { ReactFlowProps, Viewport, useViewport, SnapGrid, CoordinateExtent, Node } from '@kiroboio/reactflow';
 
 import ControlledFlow from '../../support/ControlledFlow';
 import * as simpleflow from '../../fixtures/simpleflow';

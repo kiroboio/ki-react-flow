@@ -10,7 +10,7 @@ import ReactFlow, {
   Edge,
   useNodesState,
   useEdgesState,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 import { getElements } from './utils';
 

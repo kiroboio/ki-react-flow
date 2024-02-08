@@ -1,6 +1,6 @@
 {
-  "extends": "@sumbat/tsconfig/react.json",
-  "display": "@sumbat/reactflow",
+  "extends": "@kiroboio/tsconfig/react.json",
+  "display": "@kiroboio/reactflow",
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "dist"]
 }

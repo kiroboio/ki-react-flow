@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { EdgeProps, getBezierPath, EdgeLabelRenderer, useStore } from '@sumbat/reactflow';
+import { EdgeProps, getBezierPath, EdgeLabelRenderer, useStore } from '@kiroboio/reactflow';
 
 const CustomEdge: FC<EdgeProps> = ({
   id,

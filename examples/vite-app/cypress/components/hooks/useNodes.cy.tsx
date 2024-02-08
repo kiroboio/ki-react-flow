@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import ReactFlow, { Node, useNodes } from '@sumbat/reactflow';
+import ReactFlow, { Node, useNodes } from '@kiroboio/reactflow';
 
 import { nodes } from '../../fixtures/simpleflow';
 

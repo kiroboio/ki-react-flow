@@ -12,7 +12,7 @@ import ReactFlow, {
   Controls,
   Background,
   MiniMap,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 import { getNodesAndEdges } from './utils';
 

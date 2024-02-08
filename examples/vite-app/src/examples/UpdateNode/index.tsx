@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ReactFlow, { Node, Edge, useNodesState, useEdgesState } from '@sumbat/reactflow';
+import ReactFlow, { Node, Edge, useNodesState, useEdgesState } from '@kiroboio/reactflow';
 
 import styles from './updatenode.module.css';
 

@@ -4,7 +4,7 @@ Hello there! So glad you want to help out with React Flow 🤗 You’re the bes
 
 # Our Contributing Philosophy
 
-The direction of React Flow and which new features are added, and which are left out, is decided by the core team (sometimes referred to as a “cathedral” style of development). The core team is paid to do this work ([see how here](https://@sumbat/reactflow.dev/blog/asking-for-money-for-open-source/)). With this model we ensure that the people doing the most work on the library are paid for their time and effort, and that we prevent the library from bloating.
+The direction of React Flow and which new features are added, and which are left out, is decided by the core team (sometimes referred to as a “cathedral” style of development). The core team is paid to do this work ([see how here](https://@kiroboio/reactflow.dev/blog/asking-for-money-for-open-source/)). With this model we ensure that the people doing the most work on the library are paid for their time and effort, and that we prevent the library from bloating.
 
 That being said, React Flow is only interesting because of the people who make things with it, share their work, and discuss it. Some of the most important and undervalued work in open source is from non-code contributions, and that is where we can use the most help from you.
 
@@ -18,7 +18,7 @@ The things we need the most help for the library and its community are:
 
 🎬 **Create tutorials** for React Flow. Send them to us and we’ll happily share them!
 
-**✏️ Edit our [Docs](https://@sumbat/reactflow.dev/docs/introduction/)**: Make changes in the [react-flow-docs repo](https://github.com/wbkd/react-flow-docs), or click the "edit this page” button that lives on every doc site.
+**✏️ Edit our [Docs](https://@kiroboio/reactflow.dev/docs/introduction/)**: Make changes in the [react-flow-docs repo](https://github.com/wbkd/react-flow-docs), or click the "edit this page” button that lives on every doc site.
 
 All interactions should be done with care following our [Code of Conduct](https://github.com/wbkd/react-flow/blob/main/CODE_OF_CONDUCT.md).
 
@@ -30,7 +30,7 @@ Talking to us first about the enhancement you want to build will be the most lik
 
 ### Contact us
 
-To ask about a possible enhancement, email us at info@@sumbat/reactflow.dev
+To ask about a possible enhancement, email us at info@@kiroboio/reactflow.dev
 
 
 ### 💫 Pull Requests

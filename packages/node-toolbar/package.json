@@ -1,5 +1,5 @@
 {
-  "name": "@sumbat/node-toolbar",
+  "name": "@kiroboio/node-toolbar",
   "version": "1.2.6",
   "description": "A toolbar component for React Flow that can be attached to a node.",
   "keywords": [
@@ -30,13 +30,13 @@
     "directory": "packages/node-toolbar"
   },
   "scripts": {
-    "dev": "concurrently \"rollup --config node:@sumbat/rollup-config --watch\" pnpm:css-watch",
-    "build": "rollup --config node:@sumbat/rollup-config --environment NODE_ENV:production",
+    "dev": "concurrently \"rollup --config node:@kiroboio/rollup-config --watch\" pnpm:css-watch",
+    "build": "rollup --config node:@kiroboio/rollup-config --environment NODE_ENV:production",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@sumbat/core": "workspace:*",
+    "@kiroboio/core": "workspace:*",
     "classcat": "^5.0.3",
     "zustand": "^4.3.1"
   },
@@ -45,9 +45,9 @@
     "react-dom": ">=17"
   },
   "devDependencies": {
-    "@sumbat/eslint-config": "workspace:*",
-    "@sumbat/rollup-config": "workspace:*",
-    "@sumbat/tsconfig": "workspace:*",
+    "@kiroboio/eslint-config": "workspace:*",
+    "@kiroboio/rollup-config": "workspace:*",
+    "@kiroboio/tsconfig": "workspace:*",
     "@types/node": "^18.7.16",
     "@types/react": ">=17",
     "@types/react-dom": ">=17",

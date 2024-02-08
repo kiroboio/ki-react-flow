@@ -13,7 +13,7 @@ import ReactFlow, {
   EdgeMarker,
   Panel,
   useReactFlow,
-} from '@sumbat/reactflow';
+} from '@kiroboio/reactflow';
 
 import initialItems from './initial-elements';
 

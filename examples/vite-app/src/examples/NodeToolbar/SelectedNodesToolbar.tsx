@@ -1,4 +1,4 @@
-import { NodeToolbar, ReactFlowState, useStore } from '@sumbat/reactflow';
+import { NodeToolbar, ReactFlowState, useStore } from '@kiroboio/reactflow';
 
 const selectedNodesSelector = (state: ReactFlowState) =>
   state
